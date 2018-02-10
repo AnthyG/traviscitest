@@ -1,0 +1,23 @@
+language: node_js
+node_js:
+- '8'
+sudo: required
+addons:
+  ssh_known_hosts:
+  - secure: 1iNLPF/RwELquiEH1j58pMwzpfK+zEr21fM+PIhPFkAWtniEWtyTRkxvXkssNYB3UpPPyQ1y5Zf/uPL6l0X6W3GN7c2am/nahdE0kV2an4+qvUhqJTTQR/5Xb9ZwnfeNtqPKj/ruGHzoIDNTX/LL9oipLavhqO9dPyW6vwgZHmeCNV/D3aGRgyVtVbOWPurytsK2QNbh6PPbcxoQWFeYkXj1wYcZoN0MnJ9AYxPE4UuECbygWx1xBtymMTeOPZKs1HcZisHj4PBGz68M6p9Objwxi6xLCNAWhT+ufEZ40L+r/HhzC7TjGesSYFPOLuIe6g8ySt4wCoj5YL+NGg8UyPYmi6ANRx1T0HrlQo9XAQwrKsGqHNtpCgUNMBlAN3O5RFhb66kdbZI1wIN8n5kaFJO+0kiBrcvr7+AjmjXBTqEKOlAloPiTDg6q+gn3Z0Iii0bjMBneAwC3PtFYkmOQQZd8vhvHipUDam6NtGoKzi/xMGy5ruNz6CpB61GhCn8AroCY/TSn32OMWKp6V2UoOyk7QfzeBOFt4Lmhcw3yxEwIYUBADk+7zR5aWD2Gq9IsoziNWiF0bCqIEVvkOzZ3Agab4sG8REFlnplPd1d7uELF2kFE9+5C7mCe0Gp5r/axxFuLB5paqtGLTPjppaZfGHIT0PG8XdlZk7Ik5nZq2/8=
+env:
+  global:
+  - testvar="wtf"
+before_install:
+- sudo apt-get install sshpass
+before_script:
+- ls -alh
+- echo $testvar
+- secure: "lsHbQRR3SYb6X+YihSXKhZ+kOXQCcav3JCEEKTiqtPHaBvb+e//ifiEhGMGvA1QQiDU52ZEYMP/iQbZFFtLCkizMmAOgJuIcehcfOxQ+PaOPkwOdv+FBvCfUC5ikS4/DUCZ1S4PANd88vKuL5Z3mlK7NNLB08pPGAfz+EiiLMG2Aauhtvt887BYtjaMIswLHNYKxn+Qvcx6nttPXK9OXyS7vJ3wEyT2cgXzp3peNJC+487VqLHxcTsNWJxhQ3EJ+IVPIxtG95UUkBEd/moNqTI50H57oo9ZYfrU6AgFQuA3c9kuHX0EKnsz+XnZu/D1v/BbcxAThYD32AHyvHjP7he4pgxW4KHXJdSSAGLR+dZne/OZyn4nsZgpaVVsL8Dlh05OFFnri1uyjtV/lH1/6l5RM985p/Q2wuddWyQjWtLVNAccE3h9EsPQjJYvl8bYgrL26jAkhUkVnIiEF+FBEI3DheHSvoGemWDmJRy+p5HIdHHMH3jguLjxB8XrpZjK6dLI8QyYV16PNmfBfHLXqgNWJly/0+M6iYfZh2hnmVsiosi+r4qLoDLe51GqFs0z2kEsEWyXLKzhhknn0Kz3WR1V0VZcbgXU3+VWy1hFMmG8Hnys3LqdXdITeiBUOM6wa9WdFfHKya45kVcBiVHxxXgkWK6cC6GFLH0ENSZ7Zv+Y="
+- sleep 5
+- export DISPLAY=:99.0
+- sh -e /etc/init.d/xvfb start
+- sleep 3
+cache:
+  directories:
+  - node_modules
