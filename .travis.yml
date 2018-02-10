@@ -20,7 +20,7 @@ before_script:
 - "$testcmd"
 - "$SECRETTROL"
 - echo "$SECRETSTR"
-- 'sshpass -p $FTP_PASSWORD ssh $FTP_USER@$FTP_HOST "ls; cd $TRAVISPATH && ls; echo \'Finished.\'; exit"'
+- "sshpass -p $FTP_PASSWORD ssh $FTP_USER@$FTP_HOST 'ls; cd $TRAVISPATH && ls; echo \'Finished.\'; exit'"
 - sleep 5
 - export DISPLAY=:99.0
 - sh -e /etc/init.d/xvfb start
