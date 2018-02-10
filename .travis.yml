@@ -6,14 +6,14 @@ env:
   global:
   - testvar="wtf"
   - testcmd="echo Hi"
-  - secure: DZStQYfovJYak64S3SJ+Dd+4UtEfbABFmUwaSUd6TLt+sowIcsD+/Z6SNZtSeCNEGMhxci+6ZlGyyzq7eQBLh1ZIlOrUHKokA1BMdnCDr8EBm98TgFXwGB5tQxlX1oX2BCAMrBEemspxA45HiUUb7jwVcouNpwPTnKkjos8xZf/yp46JxEF0n65e6W5M4RukeSSb+kwSvgHLbMKBhptKisuXxgz6ucerW9eFcJIsGzqSyMl984+vATECgTWe/plB8wVECr0xzvaLZy9G7+l2P7JwXoftN2qiwpf3UKjwO+YZTlCjlFWtHUOFH67mMgZ9rpJZim/FkUOe8lTn2HXSOKuqghPCFIo6w2962n34lFxX7Ic7lbyOUsOBvmomO0m8vhsEUoDDTUJ+qV1k2Z0aicQ4bS2l6QMBWsvAcyE79forj4hrcmlwo6XDns4uaEvwpdDSeryekWnS5xOnRNTxcFTbY1T/UZefRs1dNmu98Zvb2InMINPDfw24JZhrW+41yr5aiaIYwmlv3qyfrs3vS7CQm/B/B46Or8cnLF60u1IxOZUwix3RnbgGKyi57B+Xx+YfaeeiYlNavo0A+LWsGKfXqWJJPVcP0O0JPBbdvwIauw6IrDLLyyhle3qU34NOAKOAQsYNeQF3IJMkL4hp3nohRVrlB7hq1DiDRRa+wz8=
+  - secure: RNDSaMm2pmryH1U3GXPzJJlsnizP2CpIcNEi+x585mEqejxGxI+ZE2bjK46wnFzcfr3Nw2rOqHggYDXQVxQGbIFKLmfRm5Vx/9/eAUzGsMEgywy+KVWZ+nF9cRMI1OIvwtYZUMCyeOcqVOHyRGTJW5Xzy/wrS8zVsdqHbOEnaHlWMLJjhCRysW65uQaml61G4Cm6CIdMwSxCsN6W9X9mniGW5/LgtmzHqiX/2oHgrFwUh2ES65UZJhulzbje44Vv1tA9woNknTIuXYDzZxgA/QY8pCfOmGSM2NW82IjDozzkU0f6ZeiG5wz+KZ4PE241tpfL01G2VyO8qOUi5oYEyIDDVJyvketjCVlQh9oq5dLHQA8WWMS0WCx93YFpRT/rhN9xiP7BdHzH2gJ43/oDJ+l4LypcCZVw6VSL5nfQvDBu94wcbPx3yEcyJzffhWk24eGMqJtL8YLLbrpZ8q04cYiliBFT6Pwo+wPQiLrDtfKI6gRqQ2KUIYYG0pOfYQ9/uxcyl1bUxmF1HJJruPX+Gb/FKKcTePdW5NapCc6lOHyDkikV882L9bh3T8PibB4wbVLetx0IKALgB1gVQBPiIXQGK0PFLelO9HhRyR+IF8gh6Kowc1lfKJADyg6fMOV2vJGLucZSkk/C0FRP3/thNpb7Jk6foYEqORVEviWVWpw=
 before_install:
 - sudo apt-get install sshpass
 before_script:
 - ls -alh
 - echo $testvar
-- $testcmd
-- $SECRETTROL
+- "$testcmd"
+- "$SECRETTROL"
 - sleep 5
 - export DISPLAY=:99.0
 - sh -e /etc/init.d/xvfb start
