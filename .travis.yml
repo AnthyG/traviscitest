@@ -12,15 +12,14 @@ env:
 before_install:
 - sudo apt-get install sshpass
 before_script:
-  matrix:
-  - ls -alh
-  - echo $testvar
-  - echo $SECRETTROL
-  - secure: yO10IR7cXOXvk45wsEvlbzcrTLRBDMM+/eoQ3J9BfFREjMf1/YttOXrHgoA37aq71C4SbK38cgY6ZsHMjgmkwSw5WdK/3SC/BNixlzPJKwA0ZegLonLVGC3FzA/KL15AVhZ8A1FWQ0UV4SSwUWsSqtyGqv90yiXE13sC56P81zXQA4FMjO1ms8xremgsdQHirIJ8NCCBqjLMzhV0svAoLToygLW9RldE0E0je0MslPpqE9VTtsCN2uBk5qn0vW8/JclC4wHw+9+cp1MG0UOadf0Dxfvtu1Tzp+hEWzM9dFmL0IIwMRl03bdQowVjTWSYp3KJjyzTSOuZpyoE7id4PFDyBsufSWZJMr5nniA1fzqUpfk97YDxwZQCQpzv2ElFT1fqVhoKygUI8aYNbCqMxF8dXw+uxs/sOocsxdyu/iEAt9S5Hdm+vwYl9iR3PlSRwglTP+UZShsSJaN5yWGxrtUCSDzwuq8kYEMgqhHo4s2equesgyLGkRnvl6ZfrMawUzqnHCqqWGmDMyWPG5R5JJTtm9+Lar/zQJV9CwGC7P9oxg+wCY5wf4b11Brzl5QzyNSFCS6UAaumtJb4LN85WYq74cwdRIUogW+kDXWOl7v7tJ5a89vp+E0LSvLxdevtWHpoJMn40wNWWwAZ2VIbg+v6HgAVmLEERL6X75i8Xog=
-  - sleep 5
-  - export DISPLAY=:99.0
-  - sh -e /etc/init.d/xvfb start
-  - sleep 3
+- ls -alh
+- echo $testvar
+- echo $SECRETTROL
+- secure: yO10IR7cXOXvk45wsEvlbzcrTLRBDMM+/eoQ3J9BfFREjMf1/YttOXrHgoA37aq71C4SbK38cgY6ZsHMjgmkwSw5WdK/3SC/BNixlzPJKwA0ZegLonLVGC3FzA/KL15AVhZ8A1FWQ0UV4SSwUWsSqtyGqv90yiXE13sC56P81zXQA4FMjO1ms8xremgsdQHirIJ8NCCBqjLMzhV0svAoLToygLW9RldE0E0je0MslPpqE9VTtsCN2uBk5qn0vW8/JclC4wHw+9+cp1MG0UOadf0Dxfvtu1Tzp+hEWzM9dFmL0IIwMRl03bdQowVjTWSYp3KJjyzTSOuZpyoE7id4PFDyBsufSWZJMr5nniA1fzqUpfk97YDxwZQCQpzv2ElFT1fqVhoKygUI8aYNbCqMxF8dXw+uxs/sOocsxdyu/iEAt9S5Hdm+vwYl9iR3PlSRwglTP+UZShsSJaN5yWGxrtUCSDzwuq8kYEMgqhHo4s2equesgyLGkRnvl6ZfrMawUzqnHCqqWGmDMyWPG5R5JJTtm9+Lar/zQJV9CwGC7P9oxg+wCY5wf4b11Brzl5QzyNSFCS6UAaumtJb4LN85WYq74cwdRIUogW+kDXWOl7v7tJ5a89vp+E0LSvLxdevtWHpoJMn40wNWWwAZ2VIbg+v6HgAVmLEERL6X75i8Xog=
+- sleep 5
+- export DISPLAY=:99.0
+- sh -e /etc/init.d/xvfb start
+- sleep 3
 cache:
   directories:
   - node_modules
